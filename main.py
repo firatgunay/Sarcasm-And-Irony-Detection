@@ -258,7 +258,7 @@ class App:
         root.mainloop()
 
 # Veri işleme
-data_processor = DataProcessor(["Data/Train/train.csv", "Data/Test/test.csv"], clean_pattern="[^a-zA-Z0-9]", max_features=7000, stop_words="english")
+data_processor = DataProcessor(["train.csv", "test.csv"], clean_pattern="[^a-zA-Z0-9]", max_features=7000, stop_words="english")
 data_processor.load_data()
 x_vectorized, y_encoded = data_processor.preprocess()
 
